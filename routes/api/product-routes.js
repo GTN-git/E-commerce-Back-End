@@ -8,7 +8,7 @@ router.get("/", (req, res) => {
   Product.findAll({
     include: [Category, Tag],
   })
-    .then((category) => res.json(product))
+    .then((product) => res.json(product))
     .catch((err) => {
       console.log(err)
       res.status(500).json(err)
